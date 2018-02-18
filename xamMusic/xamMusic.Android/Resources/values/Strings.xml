@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="hello">Hello World, Click Me!</string>
-	<string name="app_name">xamMusic.Droid</string>
+	<string name="fb_app_id">270685116790734</string>
+	<string name="app_name">Automated Music Promoter by ACBA</string>
 </resources>

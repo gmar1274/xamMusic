@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.xamMusic" android:installLocation="preferExternal">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.xamMusic" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="15" />
+ <!--- <uses-permission android:name="com.facebook.permission.prod.FB_APP_COMMUNICATION" /> -->
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
-	<application android:label="xamMusic.Android"></application>
+	<application android:label="xamMusic.Android" android:icon="@drawable/icon"></application>
 </manifest>

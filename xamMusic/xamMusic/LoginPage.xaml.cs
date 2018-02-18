@@ -1,34 +1,34 @@
 ﻿using IO.Swagger.Model;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
+using System.Net.Http;
 using Xamarin.Forms;
-using Facebook;
+using xamMusic.ContentPages;
+using xamMusic.Models;
+
 namespace xamMusic
 {
-    public partial class MainPage : ContentPage
+    public partial class LoginPage : ContentPage
 	{
-		public MainPage()
+        
+        public LoginPage()
 		{
 			InitializeComponent();
-           /* Padding = Device.OnPlatform(
-                iOS: new Thickness(0, 20, 0, 0),
-                Android: new Thickness(10,20,0,0),
-                WinPhone: new Thickness(30,20,0,0)
-            );
-            */
+  
 		}
-       public void Login(object sender, EventArgs ea)
+
+        public void Login(object sender, EventArgs ea)
         {
             DreamFactoryAPI.DreamFactoryAPI api = new DreamFactoryAPI.DreamFactoryAPI();
             if (sender == this.loginBtnAuth)
             {
                 this.label.Text = "Button pressed Auth!";
-                MySqlDbs db =  api.ApiCallTestTableAuthAsync();
+                MySqlDbs db = api.ApiCallTestTableAuthAsync();
                 if (db == null)
                 {
-                    
+
                     DisplayAlert("Response: ", "Error network connection...", "OK");
                 }
                 else
@@ -42,6 +42,7 @@ namespace xamMusic
             {
                 this.label.Text = "FB Button pressed!";
                 
+                Navigation.PushAsync(new FBContentPage());
             }
         }
     }
